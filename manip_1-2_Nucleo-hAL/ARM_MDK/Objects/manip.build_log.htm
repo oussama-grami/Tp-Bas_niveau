@@ -1,0 +1,102 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Emir DAMERGI, INSAT, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\EMIR\Desktop\00_STD_LIB_GL3_Disco100_Nucleo103\STM32_NucleoF103_StdLib\manip_1-3\ARM_MDK\manip.uvprojx
+Project File Date:  10/21/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling main.c...
+..\stm32map.h(13): error:  #169: expected a declaration
+  ...............
+..\gpio.h(19): warning:  #12-D: parsing restarts here after previous syntax error
+  int GPIO_TestPin(GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\gpio.h(20): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_SetPin(GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\gpio.h(21): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_ResetPin (GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\main.c(11): error:  #29: expected an expression
+  	 *RCC_APB2ENR  |=  .............; //Activation de l'horloge du PORT A/C
+..\main.c(14): error:  #29: expected an expression
+  	..................
+..\main.c(32): warning:  #12-D: parsing restarts here after previous syntax error
+  	}
+..\main.c(32): error:  #65: expected a ";"
+  	}
+..\main.c: 2 warnings, 6 errors
+compiling gpio.c...
+..\stm32map.h(13): error:  #169: expected a declaration
+  ...............
+..\gpio.h(19): warning:  #12-D: parsing restarts here after previous syntax error
+  int GPIO_TestPin(GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\gpio.h(20): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_SetPin(GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\gpio.h(21): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_ResetPin (GPIO_Typedef* GPIOx, uint16_t GPIO_PIN);
+..\gpio.c(3): error:  #20: identifier "GPIO_Typedef" is undefined
+  int GPIO_TestPin(GPIO_Typedef *GPIOx, uint16_t GPIO_PIN)
+..\gpio.c(5): error:  #29: expected an expression
+  ......................
+..\gpio.c(6): error:  #65: expected a ";"
+  }
+..\gpio.c(6): warning:  #940-D: missing return statement at end of non-void function "GPIO_TestPin" 
+  }
+..\gpio.c(8): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_SetPin(GPIO_Typedef *GPIOx, uint16_t GPIO_PIN)
+..\gpio.c(10): error:  #29: expected an expression
+  	..................
+..\gpio.c(12): error:  #65: expected a ";"
+  }
+..\gpio.c(14): error:  #20: identifier "GPIO_Typedef" is undefined
+  void GPIO_ResetPin (GPIO_Typedef *GPIOx, uint16_t GPIO_PIN)
+..\gpio.c(16): error:  #29: expected an expression
+  	......................
+..\gpio.c(18): error:  #65: expected a ";"
+  }
+..\gpio.c: 2 warnings, 12 errors
+compiling core_cm3.c...
+assembling startup_stm32f10x_md.s...
+compiling misc.c...
+compiling stm32f10x_it.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_gpio.c...
+compiling system_stm32f10x.c...
+".\Objects\manip.axf" - 18 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\EMIR\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
