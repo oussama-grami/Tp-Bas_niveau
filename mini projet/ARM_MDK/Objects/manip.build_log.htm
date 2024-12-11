@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.33.0.0
 Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Emir DAMERGI, INSAT, LIC=----
+License Information: Oussema Guerami, amassarg, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.33.0.0
@@ -21,23 +21,91 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-G:\GL3-Student\TravauxPratiques\Manips_TP_GL3\manipOOP_Nucleo_1_OOLayer\ARM_MDK\manip.uvprojx
-Project File Date:  09/29/2022
+C:\Users\oussa\OneDrive\Bureau\tools\GL3\bas niveau\GL3_Sem1\TP_manips\mini projet\ARM_MDK\manip.uvprojx
+Project File Date:  12/10/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
-compiling core_cm3.c...
-assembling startup_stm32f10x_md.s...
-compiling stm32_wrapper_gpio.c...
-compiling misc.c...
-compiling system_stm32f10x.c...
+Build target 'Target 1'
+compiling stm32_wrapper_Serial.c...
+..\Serial_Mode_Name.h(67): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(68): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(69): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(70): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(71): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(72): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(73): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(74): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(75): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(76): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(77): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(78): error:  #40: expected an identifier
+..\Serial_Mode_Name.h(79): error:  #67: expected a "}"
+  	ConfDefault =8N1 	
+..\stm32_wrapper_Serial.c(37): error:  #20: identifier "USART_Mode_Tx" is undefined
+  		case 1: return USART_Mode_Tx;
+..\stm32_wrapper_Serial.c(39): error:  #20: identifier "serial_Mode_IPD" is undefined
+  		case 3: return serial_Mode_IPD;
+..\stm32_wrapper_Serial.c(40): error:  #20: identifier "serial_Mode_IN_FLOATING" is undefined
+  		default: return serial_Mode_IN_FLOATING; 
+..\stm32_wrapper_Serial.c(47): error:  #20: identifier "serial_Mode_Out_PP" is undefined
+  		case 0: return serial_Mode_Out_PP;break;
+..\stm32_wrapper_Serial.c(47): warning:  #111-D: statement is unreachable
+  		case 0: return serial_Mode_Out_PP;break;
+..\stm32_wrapper_Serial.c(48): error:  #20: identifier "serial_Mode_Out_OD" is undefined
+  		case 1: return serial_Mode_Out_OD;break;
+..\stm32_wrapper_Serial.c(48): warning:  #111-D: statement is unreachable
+  		case 1: return serial_Mode_Out_OD;break;
+..\stm32_wrapper_Serial.c(49): error:  #20: identifier "serial_Mode_AF_PP" is undefined
+  		case 2: return serial_Mode_AF_PP;break;
+..\stm32_wrapper_Serial.c(49): warning:  #111-D: statement is unreachable
+  		case 2: return serial_Mode_AF_PP;break;
+..\stm32_wrapper_Serial.c(50): error:  #20: identifier "serial_Mode_AF_OD" is undefined
+  		case 3: return serial_Mode_AF_OD;break;
+..\stm32_wrapper_Serial.c(50): warning:  #111-D: statement is unreachable
+  		case 3: return serial_Mode_AF_OD;break;
+..\stm32_wrapper_Serial.c(57): error:  #20: identifier "serial_Speed_2MHz" is undefined
+  		case 0: return serial_Speed_2MHz;
+..\stm32_wrapper_Serial.c(58): error:  #20: identifier "serial_Speed_10MHz" is undefined
+  		case 1: return serial_Speed_10MHz;
+..\stm32_wrapper_Serial.c(59): error:  #20: identifier "serial_Speed_50MHz" is undefined
+  		case 2: return serial_Speed_50MHz;
+..\stm32_wrapper_Serial.c(68): warning:  #223-D: function "get_serialport" declared implicitly
+  	int pinValue =  (get_serialport(pin)->IDR) & (1<<pinID);
+..\stm32_wrapper_Serial.c(68): error:  #44: expression must have pointer type
+  	int pinValue =  (get_serialport(pin)->IDR) & (1<<pinID);
+..\stm32_wrapper_Serial.c(86): error:  #20: identifier "serial_TypeDef" is undefined
+  	serial_TypeDef* serialx = get_serialport(pin);
+..\stm32_wrapper_Serial.c(86): error:  #20: identifier "serialx" is undefined
+  	serial_TypeDef* serialx = get_serialport(pin);
+..\stm32_wrapper_Serial.c(86): warning:  #223-D: function "get_serialport" declared implicitly
+  	serial_TypeDef* serialx = get_serialport(pin);
+..\stm32_wrapper_Serial.c(90): error:  #20: identifier "serial_InitTypeDef" is undefined
+  	serial_InitTypeDef serial_InitStruct; 
+..\stm32_wrapper_Serial.c(94): error:  #20: identifier "serialMode_TypeDef" is undefined
+  	serial_InitStruct.serial_Mode = (serialMode_TypeDef)get_serial_in_mode(mode);
+..\stm32_wrapper_Serial.c(94): error:  #65: expected a ";"
+  	serial_InitStruct.serial_Mode = (serialMode_TypeDef)get_serial_in_mode(mode);
+..\stm32_wrapper_Serial.c(96): warning:  #223-D: function "serial_Init" declared implicitly
+  	serial_Init( serialx,  &serial_InitStruct);		
+..\stm32_wrapper_Serial.c(107): error:  #20: identifier "serial_TypeDef" is undefined
+  static serial_TypeDef* get_serialport (PinName pin)
+..\stm32_wrapper_Serial.c: 7 warnings, 30 errors
 compiling main.cpp...
+..\main.cpp(2): warning:  #14-D: extra text after expected end of preprocessing directive
+  #include "PinAsInput.h".
+..\PinAsInput.h(13): error:  #5: cannot open source input file "stm32_wrapper_gpio.h": No such file or directory
+  #include <stm32_wrapper_gpio.h>
+..\main.cpp: 1 warning, 1 error
+compiling stm32f10x_usart.c...
 compiling stm32f10x_gpio.c...
 compiling stm32f10x_rcc.c...
-linking...
-Program Size: Code=1368 RO-data=272 RW-data=4 ZI-data=1636  
-".\Objects\manip.axf" - 0 Error(s), 0 Warning(s).
+compiling stm32f10x_dma.c...
+compiling misc.c...
+assembling startup_stm32f10x_md.s...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+".\Objects\manip.axf" - 31 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -47,10 +115,11 @@ Package Vendor: Keil
                 STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\Emir\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+  C:\Users\oussa\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:08
+Target not created.
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

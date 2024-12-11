@@ -1,5 +1,6 @@
 #include "stm32f10x.h"
-#include "PinAsInput.h"
+#include "Serial.h"
+
 
 using namespace OOlayer;
 
@@ -20,13 +21,13 @@ int main ()
 while (1)
 	{		
 
-		if (!MyButton){ //button pressed = 0
-		
-		//Invert PA5 using register access  ( ^: XOR)
-		GPIOA->ODR ^= 0x20; 			
-		
-		for (int i=0x7FFFFF; i>0; i--);
-		}
+		if (!MyButton) { //button pressed = 0
+
+            //Invert PA5 using register access  ( ^: XOR)
+            GPIOA->ODR ^= 0x20;
+
+            for (int i = 0x7FFFFF; i > 0; i--);
+        }
 
 	}
 }

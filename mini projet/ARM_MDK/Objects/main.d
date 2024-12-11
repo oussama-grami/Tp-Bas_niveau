@@ -9,5 +9,3 @@
 .\objects\main.o: ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\main.o: ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\main.o: ..\PinAsInput.h
-.\objects\main.o: ..\stm32_wrapper_gpio.h
-.\objects\main.o: ..\Pin_Mode_Names.h
